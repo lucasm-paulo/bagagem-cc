@@ -3,7 +3,7 @@ package assettypes
 import "github.com/goledgerdev/cc-tools/assets"
 
 // Description of a baggage
-var Bagagge = assets.AssetType{
+var Baggage = assets.AssetType{
 	Tag:         "baggage",
 	Label:       "Bagagem",
 	Description: "Baggage",
