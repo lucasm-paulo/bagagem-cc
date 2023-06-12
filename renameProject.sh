@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 
 # CAUTION: this script will replace every occurrence of the word
-# `goledgerdev/cc-tools-demo` in the project folder with whatever argument
-# you pass. Be very careful.
+# `cc-tools-demo` in the project folder with the arguments you pass. Be very careful.
 
-if [ $# -lt 1 ] ; then
-  printf "Usage:\n$ ./renameProject.sh <profile-name/my-project-name>\n"
+if [ $# -lt 2 ]; then
+  printf "Usage:\n$ ./renameProject.sh <my-profile-name> <my-project-name>\n"
   exit
 fi
 
-grep -rl goledgerdev/cc-tools-demo . --exclude-dir={.git,node_modules} | xargs sed -i "s#goledgerdev/cc-tools-demo#$1#g"
+old_project_name="cc-tools-demo"
+new_project_name=$2
+new_profile_name=$1
 
+grep -rl "$old_project_name" . --exclude-dir={.git,node_modules} | xargs sed -i "s/$old_project_name/$new_project_name/g"
+grep -rl "goledgerdev/$old_project_name" . --exclude-dir={.git,node_modules} | xargs sed -i "s/goledgerdev\/$old_project_name/$new_profile_name\/$new_project_name/g"
