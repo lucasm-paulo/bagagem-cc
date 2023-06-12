@@ -1,4 +1,4 @@
-module github.com/goledgerdev/cc-tools-demo/chaincode
+module github.com/lucasm-paulo/bagagem-cc/chaincode
 
 go 1.13
 
