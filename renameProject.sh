@@ -9,8 +9,8 @@ if [ $# -lt 2 ]; then
 fi
 
 old_project_name="cc-tools-demo"
-new_project_name=$2
-new_profile_name=$1
+new_project_name="$2"
+new_profile_name="$1"
 
-grep -rl "$old_project_name" . --exclude-dir={.git,node_modules} | xargs sed -i "s/$old_project_name/$new_project_name/g"
-grep -rl "goledgerdev/$old_project_name" . --exclude-dir={.git,node_modules} | xargs sed -i "s/goledgerdev\/$old_project_name/$new_profile_name\/$new_project_name/g"
+find . -type f -not -path '*/\.git*' -not -path '*/node_modules*' -exec sed -i "s/$old_project_name/$new_project_name/g" {} +
+find . -type f -not -path '*/\.git*' -not -path '*/node_modules*' -exec sed -i "s/goledgerdev\/$old_project_name/$new_profile_name\/$new_project_name/g" {} +
