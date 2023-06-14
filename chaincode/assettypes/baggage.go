@@ -18,11 +18,16 @@ var Baggage = assets.AssetType{
 			DataType: "string",
 			Writers:  []string{`org1MSP`, "orgMSP"}, // This means only org1 can create the asset (others can edit)
 		},
-		{
-			/// Reference to another asset
+		/*{
+			// Reference to another asset
 			Tag:      "passenger",
 			Label:    "Passageiro",
 			DataType: "->person",
+		},*/
+		{
+			Tag:      "passenger_id",
+			Label:    "ID (CPF) do passageiro",
+			DataType: "cpf",
 		},
 		{
 			Tag:      "color",
