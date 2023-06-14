@@ -39,5 +39,10 @@ var Baggage = assets.AssetType{
 			Label:    "Tamanho da bagagem",
 			DataType: "string",
 		},
+		{
+			Tag:      "blob",
+			Label:    "URI do Blob que armazena a foto da bagagem",
+			DataType: "string",
+		},
 	},
 }
