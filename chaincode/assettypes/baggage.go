@@ -20,9 +20,9 @@ var Baggage = assets.AssetType{
 		},
 		{
 			/// Reference to another asset
-			Tag:      "passenger_id",
-			Label:    "ID (CPF) do Passageiro",
-			DataType: "->person(id)",
+			Tag:      "passenger",
+			Label:    "Passageiro",
+			DataType: "->person",
 		},
 		{
 			Tag:      "color",
