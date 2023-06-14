@@ -37,17 +37,19 @@ var Person = assets.AssetType{
 			},
 		},
 		{
-			// Optional property
-			Tag:      "dateOfBirth",
-			Label:    "Data de Nascimento",
-			DataType: "datetime",
+			Tag:      "address",
+			Label:    "Endereço",
+			DataType: "string",
 		},
 		{
-			// Property with default value
-			Tag:          "height",
-			Label:        "Altura da Pessoa",
-			DefaultValue: 0,
-			DataType:     "number",
+			Tag:      "city",
+			Label:    "Cidade",
+			DataType: "string",
+		},
+		{
+			Tag:      "estate",
+			Label:    "Estado",
+			DataType: "string",
 		},
 	},
 }
