@@ -12,14 +12,14 @@ var cpf = assets.DataType{
 	Parse: func(data interface{}) (string, interface{}, errors.ICCError) {
 		cpf, ok := data.(string)
 		if !ok {
-			return "", nil, errors.NewCCError("a propriedade deve ser do tipo 'string'", 400)
+			return "", nil, errors.NewCCError("?a propriedade deve ser do tipo 'string'", 400)
 		}
 
 		cpf = strings.ReplaceAll(cpf, ".", "")
 		cpf = strings.ReplaceAll(cpf, "-", "")
 
 		if len(cpf) != 11 {
-			return "", nil, errors.NewCCError("O CPF deve ter 11 dígitos", 400)
+			return "", nil, errors.NewCCError("?O CPF deve ter 11 dígitos", 400)
 		}
 
 		var vd0 int
@@ -35,7 +35,7 @@ var cpf = assets.DataType{
 			vd0 = 0
 		}
 		if int(cpf[9])-'0' != vd0 {
-			return "", nil, errors.NewCCError("CPF inválido", 400)
+			return "", nil, errors.NewCCError("?CPF inválido", 400)
 		}
 
 		var vd1 int
@@ -51,7 +51,7 @@ var cpf = assets.DataType{
 			vd1 = 0
 		}
 		if int(cpf[10])-'0' != vd1 {
-			return "", nil, errors.NewCCError("CPF inválido", 400)
+			return "", nil, errors.NewCCError("?CPF inválido", 400)
 		}
 
 		return cpf, cpf, nil
