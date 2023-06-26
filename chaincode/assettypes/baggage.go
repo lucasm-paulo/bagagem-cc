@@ -49,5 +49,25 @@ var Baggage = assets.AssetType{
 			Label:    "Observações registradas da bagagem",
 			DataType: "string",
 		},
+		{
+			Tag:      "flight_ticket_id",
+			Label:    "ID da passagem",
+			DataType: "string",
+		},
+		{
+			Tag:      "origin",
+			Label:    "Origem da viagem",
+			DataType: "string",
+		},
+		{
+			Tag:      "destination",
+			Label:    "Destino da viagem",
+			DataType: "string",
+		},
+		{
+			Tag:      "date",
+			Label:    "Data da viagem",
+			DataType: "string",
+		},
 	},
 }
